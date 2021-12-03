@@ -43,8 +43,11 @@ public class Robot extends TimedRobot {
   private final VictorSP rightmotor2 = new VictorSP(1);
   
    // Left Motors
-  private final VictorSP leftmotor1 = new VictorSP(3);
-  private final VictorSP leftmotor2 = new VictorSP(4);
+  private final VictorSP leftmotor1 = new VictorSP(2);
+  private final VictorSP leftmotor2 = new VictorSP(3);
+  
+  //Shooter
+  private final VictorSPX shooter1 = new VictorSPX(5);
 
   //Speed Controller Groups
   private final SpeedControllerGroup rightSpeedGroup = new SpeedControllerGroup(rightmotor1, rightmotor2);
@@ -75,8 +78,11 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
 
-    drivetrain.arcadeDrive(stick.getY(), stick.getZ());
+    drivetrain.arcadeDrive(stick.getY()^3, stick.getZ()^3);
 
+    if (stick.getRawButton(1)){
+    shooter.set(0.8);
+    }
 
 
   }
