@@ -47,7 +47,7 @@ public class Robot extends TimedRobot {
   private final VictorSP leftmotor2 = new VictorSP(3);
   
   //Shooter
-  private final VictorSPX shooter1 = new VictorSPX(5);
+  private final VictorSPX shooter1 = new VictorSPX(4);
 
   //Speed Controller Groups
   private final SpeedControllerGroup rightSpeedGroup = new SpeedControllerGroup(rightmotor1, rightmotor2);
