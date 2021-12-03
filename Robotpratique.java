@@ -78,7 +78,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
 
-    drivetrain.arcadeDrive(stick.getY()^3, stick.getZ()^3);#  
+    drivetrain.arcadeDrive(stick.getY()^3, stick.getZ()^3);
 
     if (stick.getRawButton(1)==True){
     shooter.set(0.8);
